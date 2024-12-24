@@ -16,7 +16,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import { Avatar, Button, Divider, Select } from '@mui/material';
-import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined';
+import Image from 'next/image';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -36,7 +36,7 @@ const Search = styled('div')(({ theme }) => ({
     paddingInline: '3px',
     [theme.breakpoints.up('sm')]: {
         marginLeft: theme.spacing(3),
-        width: 960,
+        width: 640,
     },
 }));
 
@@ -197,12 +197,20 @@ export default function Navbar() {
                         alignItems: 'center',
                         gap: 1
                     }}>
-                        <GppGoodOutlinedIcon fontSize='large' />
+                        <Image
+                            src='/images/logo.png'
+                            alt="Elements"
+                            width={32}
+                            height={32}
+                        />
                         <Typography
-                            variant="h6"
+                            variant="h5"
                             noWrap
                             component="div"
-                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            sx={{
+                                display: { xs: 'none', sm: 'block' },
+                                fontWeight: 'semibold',
+                            }}
                         >
                             Elements
                         </Typography>
@@ -256,8 +264,8 @@ export default function Navbar() {
                             gap: 1
                         }}>
                             <Button size='small' sx={{
-                                fontSize: '14px',
                                 px: 2,
+                                fontSize: '14px',
                                 textTransform: 'unset',
                                 backgroundColor: '#E1E3FB'
                             }} color='inherit' >Unlimited Downloads</Button>
