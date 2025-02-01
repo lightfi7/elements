@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import 'swiper/css';
 import { ThemeProvider } from "@mui/material";
 import theme from "@/theme";
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
